@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Thư viện ảnh của tôi</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="addTabFocus()">
+
+    <!-- HEADER -->
+    <header>
+        <a href="#" class="logo">
+            <span class="logo-icon">📷</span>
+            MyGallery
+        </a>
+
+        <nav aria-label="Điều hướng chính">
+            <a href="#home">Trang chủ</a>
+            <a href="#collection">Bộ sưu tập</a>
+            <a href="#about">Giới thiệu</a>
+        </nav>
+
+        <div class="search">
+            🔍 <span>Tìm kiếm ảnh...</span>
+        </div>
+    </header>
+
+
+    <main id="home">
+
+        <!-- HERO -->
+        <section class="hero">
+
+            <!-- BÊN TRÁI -->
+            <div class="hero-content">
+
+                <p class="small-title">
+                    <span></span>
+                    KHÁM PHÁ THẾ GIỚI
+                </p>
+
+                <h1>
+                    Thư viện ảnh
+                    <strong>của tôi</strong>
+                </h1>
+
+                <p class="description">
+                    Những khoảnh khắc đẹp – những câu chuyện riêng.
+                    Di chuột hoặc dùng phím Tab để khám phá mỗi bức ảnh.
+                </p>
+
+                <a class="explore-button" href="#collection">
+                    Khám phá bộ sưu tập
+                    <span>→</span>
+                </a>
+
+                <blockquote>
+                    “Ảnh là cách giữ lại cảm xúc của thời gian...”
+                </blockquote>
+
+            </div>
+
+
+            <!-- BÊN PHẢI - ẢNH LỚN -->
+            <div class="featured">
+
+                <div id="image" aria-live="polite">
+
+                    <div class="image-info">
+                        <h2 id="image-title">
+                            Hoàng hôn trên mặt hồ
+                        </h2>
+
+                        <p id="image-description">
+                            Những đám mây bồng bềnh giữa bầu trời xanh.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- COLLECTION -->
+        <section class="collection" id="collection">
+
+            <div class="collection-heading">
+
+                <div>
+                    <h2>Bộ sưu tập</h2>
+                    <p>Mỗi bức ảnh là một hành trình...</p>
+                </div>
+
+                <span>6 khoảnh khắc</span>
+
+            </div>
+
+
+            <div class="gallery">
+
+                <figure>
+                    <img
+                        class="preview"
+                        src="images/anh1.jpg"
+                        alt="Đêm ngoài hành tinh"
+                        data-description="Một chuyến phiêu lưu giữa bầu trời đầy màu sắc."
+                        onmouseover="upDate(this)"
+                        onmouseleave="unDo()"
+                        onfocus="upDate(this)"
+                        onblur="unDo()">
+
+                    <figcaption>Đêm ngoài hành tinh</figcaption>
+                </figure>
+
+
+                <figure>
+                    <img
+                        class="preview"
+                        src="images/anh2.jpg"
+                        alt="Thành phố bình minh"
+                        data-description="Thành phố rực rỡ dưới ánh sáng của bình minh."
+                        onmouseover="upDate(this)"
+                        onmouseleave="unDo()"
+                        onfocus="upDate(this)"
+                        onblur="unDo()">
+
+                    <figcaption>Thành phố bình minh</figcaption>
+                </figure>
+
+
+                <figure>
+                    <img
+                        class="preview"
+                        src="images/anh3.jpg"
+                        alt="Cánh rừng yên bình"
+                        data-description="Không gian xanh mát và yên bình giữa thiên nhiên."
+                        onmouseover="upDate(this)"
+                        onmouseleave="unDo()"
+                        onfocus="upDate(this)"
+                        onblur="unDo()">
+
+                    <figcaption>Cánh rừng yên bình</figcaption>
+                </figure>
+
+
+                <figure>
+                    <img
+                        class="preview"
+                        src="images/anh4.jpg"
+                        alt="Ngày hè trong lành"
+                        data-description="Một ngày hè với bầu trời xanh và những đám mây trắng."
+                        onmouseover="upDate(this)"
+                        onmouseleave="unDo()"
+                        onfocus="upDate(this)"
+                        onblur="unDo()">
+
+                    <figcaption>Ngày hè trong lành</figcaption>
+                </figure>
+
+
+                <figure>
+                    <img
+                        class="preview"
+                        src="images/anh5.jpg"
+                        alt="Thung lũng xanh"
+                        data-description="Thung lũng rộng lớn nằm giữa những ngọn núi xanh."
+                        onmouseover="upDate(this)"
+                        onmouseleave="unDo()"
+                        onfocus="upDate(this)"
+                        onblur="unDo()">
+
+                    <figcaption>Thung lũng xanh</figcaption>
+                </figure>
+
+
+                <figure>
+                    <img
+                        class="preview"
+                        src="images/anh6.jpg"
+                        alt="Hoàng hôn trên mặt hồ"
+                        data-description="Những đám mây bồng bềnh giữa bầu trời xanh."
+                        onmouseover="upDate(this)"
+                        onmouseleave="unDo()"
+                        onfocus="upDate(this)"
+                        onblur="unDo()">
+
+                    <figcaption>Hoàng hôn trên mặt hồ</figcaption>
+                </figure>
+
+            </div>
+
+        </section>
+
+
+        <!-- ABOUT -->
+        <section class="about" id="about">
+            <p>
+                ❝ Thiên nhiên luôn mang đến những gam màu tuyệt vời nhất.
+            </p>
+        </section>
+
+    </main>
+
+
+    <footer>
+        <p>MyGallery • Interactive Photo Gallery</p>
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
